@@ -1,0 +1,88 @@
+<group name="dns,pihole,">
+  <rule id="101000" level="3">
+    <decoded_as>dnsmasq</decoded_as>
+    <description>DNSMASQ messages grouped.</description>
+  </rule>
+
+<rule id="101010" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">query[A]</field>
+     <description>DNSMASQ: Quering type A record </description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101015" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">query[CNAME]</field>
+     <description>DNSMASQ: Quering type CNAME record</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101020" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">query[AAA]</field>
+     <description>DNSMASQ: Quering type AAA record</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101025" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">query[MX]</field>
+     <description>DNSMASQ: Quering type MX record</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101030" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">query[TXT]</field>
+     <description>DNSMASQ: Quering type TXT record</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101030" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">query[PTR]</field>
+     <description>DNSMASQ: Quering type PTR record</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101035" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">query[HTTPS]</field>
+     <description>DNSMASQ: Quering type HTTPS record</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101050" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">cached</field>
+     <description>DNSMASQ: Query Cached</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101055" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">reply</field>
+     <description>DNSMASQ: Reply Query</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101060" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">forwarded</field>
+     <description>DNSMASQ: Reply Forwarded</description>
+     <group>query_dns</group>
+</rule>
+
+<rule id="101065" level="3">
+     <if_sid>101000</if_sid>
+     <field name="query_type">blocked</field>
+     <description>DNSMASQ: Query Blocked</description>
+     <group>query_dns</group>
+</rule>
+</group>
+
+<!--
+  -  pihole rules
+  -  Author: k0jir0900
+-->
