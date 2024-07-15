@@ -39,47 +39,48 @@
      <group>query_dns</group>
 </rule>
 
-<rule id="101030" level="3">
+<rule id="101035" level="3">
      <if_sid>101000</if_sid>
      <field name="query_type">query[PTR]</field>
      <description>DNSMASQ: Quering type PTR record</description>
      <group>query_dns</group>
 </rule>
 
-<rule id="101035" level="3">
+<rule id="101040" level="3">
      <if_sid>101000</if_sid>
      <field name="query_type">query[HTTPS]</field>
      <description>DNSMASQ: Quering type HTTPS record</description>
      <group>query_dns</group>
 </rule>
 
-<rule id="101050" level="3">
+<rule id="101045" level="3">
      <if_sid>101000</if_sid>
      <field name="query_type">cached</field>
      <description>DNSMASQ: Query Cached</description>
      <group>query_dns</group>
 </rule>
 
-<rule id="101055" level="3">
+<rule id="101050" level="3">
      <if_sid>101000</if_sid>
      <field name="query_type">reply</field>
      <description>DNSMASQ: Reply Query</description>
      <group>query_dns</group>
 </rule>
 
-<rule id="101060" level="3">
+<rule id="101055" level="3">
      <if_sid>101000</if_sid>
      <field name="query_type">forwarded</field>
      <description>DNSMASQ: Reply Forwarded</description>
      <group>query_dns</group>
 </rule>
 
-<rule id="101065" level="3">
+<rule id="101060" level="3">
      <if_sid>101000</if_sid>
      <field name="query_type">blocked</field>
      <description>DNSMASQ: Query Blocked</description>
      <group>query_dns</group>
 </rule>
+
 </group>
 
 <!--
